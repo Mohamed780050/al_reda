@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>تصدير الخضروات الطازجة - صفحة متكاملة</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285430",
+              secondary: "#FCAE1E",
+              "background-light": "#F8F9FA",
+              "background-dark": "#102218",
+              "text-light": "#343A40",
+              "text-dark": "#F8F9FA",
+            },
+            fontFamily: {
+              display: ["Cairo", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            animation: {
+              "fade-in-up": "fade-in-up 0.8s ease-out forwards",
+              "pulse-on-load": "pulse-on-load 2s ease-out 1.2s 1 forwards",
+            },
+            keyframes: {
+              "fade-in-up": {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              "pulse-on-load": {
+                "0%, 100%": { transform: "scale(1)" },
+                "50%": { transform: "scale(1.05)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .product-filter-btn[aria-selected="true"] {
+        background-color: #285430;
+        color: white;
+      }
+      .product-filter-btn[aria-selected="false"] {
+        background-color: transparent;
+        color: #343a40;
+      }
+      html.dark .product-filter-btn[aria-selected="false"] {
+        color: #f8f9fa;
+      }
+      html.dark .product-filter-btn[aria-selected="false"]:hover {
+        background-color: rgba(40, 84, 48, 0.2);
+      }
+      html:not(.dark) .product-filter-btn[aria-selected="false"]:hover {
+        background-color: rgba(40, 84, 48, 0.1);
+      }
+      .product-card {
+        transition: opacity 300ms ease-out, transform 300ms ease-out;
+        opacity: 1;
+        transform: scale(1);
+      }
+      .product-card.hidden {
+        display: block !important;
+        opacity: 0;
+        transform: scale(0.95);
+        pointer-events: none;
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      @keyframes hero-slideshow {
+        0%,
+        20% {
+          opacity: 1;
+        }
+        25%,
+        45% {
+          opacity: 0;
+        }
+        50%,
+        70% {
+          opacity: 0;
+        }
+        75%,
+        95% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .hero-bg-slide:nth-child(1) {
+        animation: hero-slideshow 16s infinite;
+        animation-delay: 0s;
+      }
+      .hero-bg-slide:nth-child(2) {
+        animation: hero-slideshow 16s infinite;
+        animation-delay: -12s;
+      }
+      .hero-bg-slide:nth-child(3) {
+        animation: hero-slideshow 16s infinite;
+        animation-delay: -8s;
+      }
+      .hero-bg-slide:nth-child(4) {
+        animation: hero-slideshow 16s infinite;
+        animation-delay: -4s;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark"
+  >
+    <div class="relative flex min-h-screen w-full flex-col">
+      <header
+        class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80 dark:border-primary/30 sm:px-6 lg:px-8"
+      >
+        <div class="mx-auto flex max-w-7xl items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 text-primary">
+              <div class="size-8">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+                  ></path>
+                  <path
+                    clip-rule="evenodd"
+                    d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold text-text-light dark:text-text-dark">
+                تصدير الخضروات
+              </h2>
+            </div>
+          </div>
+          <div class="hidden flex-1 items-center justify-center gap-8 md:flex">
+            <nav
+              class="flex items-center gap-6 text-sm font-medium text-text-light dark:text-text-dark"
+            >
+              <a class="transition-colors hover:text-primary" href="#products"
+                >المنتجات</a
+              >
+              <a class="transition-colors hover:text-primary" href="#about"
+                >من نحن</a
+              >
+              <a class="transition-colors hover:text-primary" href="#quality"
+                >الجودة</a
+              >
+              <a class="transition-colors hover:text-primary" href="#contact"
+                >اتصل بنا</a
+              >
+            </nav>
+          </div>
+          <div class="hidden items-center gap-8 md:flex">
+            <button
+              class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-text-light text-sm font-bold transition-transform hover:scale-105"
+            >
+              <span class="truncate">اطلب عرض سعر</span>
+            </button>
+          </div>
+          <div class="md:hidden">
+            <button class="p-2">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1">
+        <section
+          class="relative flex h-[calc(100vh-65px)] min-h-[600px] w-full items-center justify-center text-center"
+        >
+          <div class="absolute inset-0 overflow-hidden">
+            <div
+              class="hero-bg-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            ></div>
+            <div
+              class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1594771804886-a933bb2d609b?q=80&w=1482&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            ></div>
+            <div
+              class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1761839257874-e56dfa2260cb?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            ></div>
+            <div
+              class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1557234195-bd9f290f0e4d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            ></div>
+          </div>
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div
+            class="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-4"
+          >
+            <div class="flex flex-col gap-4 text-white">
+              <h1
+                class="animate-fade-in-up text-4xl font-black leading-tight opacity-0 drop-shadow-md sm:text-5xl md:text-6xl"
+                style="animation-delay: 0.4s"
+              >
+                خضروات طازجة مُصدّرة بأعلى معايير الجودة
+              </h1>
+              <p
+                class="animate-fade-in-up text-lg font-normal leading-normal text-white/90 opacity-0 drop-shadow-sm md:text-xl"
+                style="animation-delay: 0.8s"
+              >
+                نختار، نعبّئ، ونوصل إلى أي ميناء عالمي — خدمات مُعتمدة ومُجربة.
+              </p>
+            </div>
+            <button
+              class="animate-pulse-on-load flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary px-8 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-secondary hover:shadow-xl sm:h-14 sm:px-10 sm:text-lg"
+            >
+              <span class="truncate">اطلب عينة</span>
+            </button>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-background-dark py-16 sm:py-24"
+        >
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div
+                class="flex flex-col items-center gap-4 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center dark:border-primary/30 dark:bg-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >health_and_safety</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3
+                    class="text-lg font-bold text-text-light dark:text-text-dark"
+                  >
+                    الجودة الفائقة
+                  </h3>
+                  <p class="text-sm text-text-light/70 dark:text-text-dark/70">
+                    جودة فائقة ومواصفات عالمية.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center gap-4 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center dark:border-primary/30 dark:bg-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >package_2</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3
+                    class="text-lg font-bold text-text-light dark:text-text-dark"
+                  >
+                    التعبئة القياسية
+                  </h3>
+                  <p class="text-sm text-text-light/70 dark:text-text-dark/70">
+                    تعبئة مبتكرة تحافظ على الطزاجة.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center gap-4 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center dark:border-primary/30 dark:bg-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl">public</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3
+                    class="text-lg font-bold text-text-light dark:text-text-dark"
+                  >
+                    التسليم الدولي
+                  </h3>
+                  <p class="text-sm text-text-light/70 dark:text-text-dark/70">
+                    شحن دولي سريع وموثوق.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center gap-4 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center dark:border-primary/30 dark:bg-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >workspace_premium</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3
+                    class="text-lg font-bold text-text-light dark:text-text-dark"
+                  >
+                    الشهادات المعتمدة
+                  </h3>
+                  <p class="text-sm text-text-light/70 dark:text-text-dark/70">
+                    شهادات عالمية تؤكد التزامنا.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-background-dark py-16 sm:py-24"
+          id="about"
+        >
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+              <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                  >
+                    شريككم الموثوق في الخضروات الطازجة
+                  </h2>
+                  <p class="text-lg text-text-light/80 dark:text-text-dark/80">
+                    نحن شركة رائدة في مجال تصدير الخضروات الطازجة، ملتزمون
+                    بتقديم أجود المنتجات لعملائنا حول العالم. خبرتنا الطويلة
+                    وشبكتنا الواسعة تضمن لكم خدمة استثنائية ومنتجات تلبي أعلى
+                    المعايير العالمية.
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 gap-6 sm:grid-cols-2"
+                  id="stats-section"
+                >
+                  <div
+                    class="flex items-center gap-4 rounded-xl bg-primary/5 p-4 dark:bg-primary/10"
+                  >
+                    <div
+                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary"
+                    >
+                      <span class="material-symbols-outlined"
+                        >calendar_today</span
+                      >
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold">
+                        <span class="counter" data-target="15">0</span>+
+                      </p>
+                      <p
+                        class="text-sm text-text-light/70 dark:text-text-dark/70"
+                      >
+                        عاماً من الخبرة
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-4 rounded-xl bg-primary/5 p-4 dark:bg-primary/10"
+                  >
+                    <div
+                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary"
+                    >
+                      <span class="material-symbols-outlined">flag</span>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold">
+                        <span class="counter" data-target="20">0</span>+
+                      </p>
+                      <p
+                        class="text-sm text-text-light/70 dark:text-text-dark/70"
+                      >
+                        دولة نصدر إليها
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-80 w-full overflow-hidden rounded-xl lg:h-full">
+                <img
+                  alt="عمال المزرعة يفرزون الخضروات الطازجة للتصدير"
+                  class="h-full w-full object-cover"
+                  src="https://plus.unsplash.com/premium_photo-1663945778994-11b3201882a0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-primary/5 dark:bg-primary/10 py-16 sm:py-24"
+          id="products"
+        >
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col gap-12">
+              <div class="flex flex-col items-center gap-4 text-center">
+                <h2
+                  class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                >
+                  منتجاتنا من الخضروات الطازجة
+                </h2>
+                <p
+                  class="max-w-2xl text-lg text-text-light/80 dark:text-text-dark/80"
+                >
+                  نقدم تشكيلة واسعة من الخضروات عالية الجودة، يتم حصادها
+                  وتعبئتها بعناية لتلبية معايير التصدير العالمية.
+                </p>
+              </div>
+              <div
+                class="flex flex-wrap items-center justify-center gap-2 sm:gap-4"
+                id="product-filters"
+              >
+                <button
+                  aria-selected="true"
+                  class="product-filter-btn rounded-full px-4 py-2 text-sm font-medium shadow-sm transition-colors"
+                  data-filter="all"
+                >
+                  الكل
+                </button>
+                <button
+                  aria-selected="false"
+                  class="product-filter-btn rounded-full px-4 py-2 text-sm font-medium transition-colors"
+                  data-filter="leafy"
+                >
+                  خضروات ورقية
+                </button>
+                <button
+                  aria-selected="false"
+                  class="product-filter-btn rounded-full px-4 py-2 text-sm font-medium transition-colors"
+                  data-filter="root"
+                >
+                  خضروات جذرية
+                </button>
+                <button
+                  aria-selected="false"
+                  class="product-filter-btn rounded-full px-4 py-2 text-sm font-medium transition-colors"
+                  data-filter="other"
+                >
+                  فواكه وخضروات أخرى
+                </button>
+              </div>
+              <div
+                class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                id="product-grid"
+              >
+                <div
+                  class="product-card overflow-hidden rounded-xl border border-primary/20 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-primary/30 dark:bg-background-dark"
+                  data-category="leafy"
+                >
+                  <img
+                    alt="صورة سبانخ طازجة بأوراق خضراء داكنة"
+                    class="h-56 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-primary">سبانخ</h3>
+                    <p
+                      class="mt-2 text-sm text-text-light/80 dark:text-text-dark/80"
+                    >
+                      سبانخ طازجة غنية بالعناصر الغذائية، معبأة للحفاظ على
+                      نضارتها وجودتها للتصدير.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="product-card overflow-hidden rounded-xl border border-primary/20 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-primary/30 dark:bg-background-dark"
+                  data-category="leafy"
+                >
+                  <img
+                    alt="صورة خس طازج بأوراق مقرمشة"
+                    class="h-56 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1556781366-336f8353ba7c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGV0dHVjZXxlbnwwfHwwfHx8MA%3D%3D"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-primary">خس</h3>
+                    <p
+                      class="mt-2 text-sm text-text-light/80 dark:text-text-dark/80"
+                    >
+                      خس مقرمش وطازج، يتم انتقاؤه بعناية فائقة وجاهز للشحن إلى
+                      الأسواق العالمية.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="product-card overflow-hidden rounded-xl border border-primary/20 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-primary/30 dark:bg-background-dark"
+                  data-category="root"
+                >
+                  <img
+                    alt="صورة جزر طازج برتقالي اللون"
+                    class="h-56 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1689774156286-0160d3f9c700?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcnJvdHN8ZW58MHx8MHx8fDA%3D"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-primary">جزر</h3>
+                    <p
+                      class="mt-2 text-sm text-text-light/80 dark:text-text-dark/80"
+                    >
+                      جزر برتقالي طازج وحلو المذاق، يتم غسله وتعبئته وفقًا لأعلى
+                      معايير الجودة للتصدير.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="product-card overflow-hidden rounded-xl border border-primary/20 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-primary/30 dark:bg-background-dark"
+                  data-category="root"
+                >
+                  <img
+                    alt="صورة بطاطس نظيفة وجاهزة للطهي"
+                    class="h-56 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UG90YXRvZXN8ZW58MHx8MHx8fDA%3D"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-primary">بطاطس</h3>
+                    <p
+                      class="mt-2 text-sm text-text-light/80 dark:text-text-dark/80"
+                    >
+                      بطاطس عالية الجودة، متوفرة بأحجام مختلفة ومناسبة لجميع
+                      أنواع الطهي والأسواق.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="product-card overflow-hidden rounded-xl border border-primary/20 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-primary/30 dark:bg-background-dark"
+                  data-category="other"
+                >
+                  <img
+                    alt="صورة فلفل ملون بألوان زاهية (أحمر، أصفر، برتقالي)"
+                    class="h-56 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1690127819258-f4e36fdead78?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-primary">فلفل ملون</h3>
+                    <p
+                      class="mt-2 text-sm text-text-light/80 dark:text-text-dark/80"
+                    >
+                      تشكيلة من الفلفل الأحمر والأصفر والبرتقالي، غنية بالنكهة
+                      ومثالية لمختلف الأسواق العالمية.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="product-card overflow-hidden rounded-xl border border-primary/20 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-primary/30 dark:bg-background-dark"
+                  data-category="other"
+                >
+                  <img
+                    alt="صورة باذنجان طازج ولامع على سطح خشبي"
+                    class="h-56 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1579843692771-027a4a8fda48?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGVnZ3BsYW50fGVufDB8fDB8fHww"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-primary">باذنجان</h3>
+                    <p
+                      class="mt-2 text-sm text-text-light/80 dark:text-text-dark/80"
+                    >
+                      باذنجان أرجواني داكن ولامع، يتميز بالجودة العالية ويتم
+                      تعبئته بعناية للشحن الدولي.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-background-dark py-16 sm:py-24"
+          id="quality"
+        >
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+              <div
+                class="order-last h-80 w-full overflow-hidden rounded-xl lg:order-first lg:h-[500px]"
+              >
+                <img
+                  alt="شهادات جودة معروضة بفخر"
+                  class="h-full w-full object-cover"
+                  src="https://images.unsplash.com/photo-1464374288807-174911d4adb9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cXVhbGl0eXxlbnwwfHwwfHx8MA%3D%3D"
+                />
+              </div>
+              <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                  >
+                    الجودة والشهادات
+                  </h2>
+                  <p class="text-lg text-text-light/80 dark:text-text-dark/80">
+                    نحن ملتزمون بأعلى معايير الجودة العالمية في كل مرحلة من
+                    مراحل الإنتاج والتصدير. من المزرعة إلى الميناء، نطبق إجراءات
+                    صارمة لضمان سلامة الأغذية ونضارة المنتج.
+                  </p>
+                </div>
+                <ul class="space-y-4 text-text-light/90 dark:text-text-dark/90">
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined mt-1 text-primary"
+                      >check_circle</span
+                    >
+                    <span>شهادة ISO 22000 لسلامة الأغذية.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined mt-1 text-primary"
+                      >check_circle</span
+                    >
+                    <span>شهادة GlobalG.A.P. للممارسات الزراعية الجيدة.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined mt-1 text-primary"
+                      >check_circle</span
+                    >
+                    <span
+                      >فحوصات مخبرية دورية لضمان خلو المنتجات من المبيدات.</span
+                    >
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-4 pt-4">
+                  <img
+                    alt="Logo ISO 22000"
+                    class="h-16 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6T4odvNVk8xLFQLFArfRo9UtIMwR5Eh68jJpKjC_rr-l09uPrSUzlMHZnaVZ43AX8a8HvKgjHe7RyNJBSo7y42ug_pOZEF8PDFSdKNbX-9RI5Pr5BdkTKPyKjX8ESrvbxdfpAr1A4xN71gYUZ6oUxjR-E7IpfFXOm9hBW3dlJYs7tzDoqCCzuKL3VSjRVGJv2BTG9jgQclPJ3hJXguMIcKB1CxDDx9a9bS8pdpi2WfXvsAzvuLCpgIOrIWcJF1UrqIDcqC1e8HzM"
+                  />
+                  <img
+                    alt="Logo GlobalG.A.P."
+                    class="h-16 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHgUeSEXSrg6HMP3aVvr0UbiYgCraLra6uKbBtlh-PpZE74s0_uNG23JeYT6Yw7Q4gsLveeyM8vJcGzvLv8SDAVL43yAANAhPiBcMdud_t5jOG5wLteYlhJjk4mtjZPp4A3wPt3W_jJtKXS-hca2jjXgqimTiEE7ptrNwA-3fRZbbE-33HZ2-fy3Ylj2uuTeXkyWsbdbZuDnLkR3SOvuwG5xlObU1AsDcw9i4Unr4gBF6DnSTBgJINHXsnRWmLaOOicbcSVmGsXj4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-primary/5 dark:bg-primary/10 py-16 sm:py-24">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+              <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                  >
+                    سلاسل التوريد واللوجستيات
+                  </h2>
+                  <p class="text-lg text-text-light/80 dark:text-text-dark/80">
+                    تم تصميم عملياتنا اللوجستية لضمان وصول شحناتكم بأفضل حالة
+                    وفي الوقت المحدد. نحن ندير سلسلة التوريد بالكامل، بدءًا من
+                    التبريد المبدئي في المزرعة وحتى التسليم النهائي في ميناء
+                    الوصول.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div
+                    class="flex flex-col gap-2 rounded-xl bg-background-light p-4 dark:bg-background-dark"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl text-primary"
+                      >local_shipping</span
+                    >
+                    <h3 class="font-bold">أسطول شحن مبرد</h3>
+                    <p
+                      class="text-sm text-text-light/70 dark:text-text-dark/70"
+                    >
+                      نقل بري وجوي وبحري مبرد للحفاظ على درجة الحرارة المثالية.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col gap-2 rounded-xl bg-background-light p-4 dark:bg-background-dark"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl text-primary"
+                      >inventory</span
+                    >
+                    <h3 class="font-bold">تتبع الشحنات</h3>
+                    <p
+                      class="text-sm text-text-light/70 dark:text-text-dark/70"
+                    >
+                      نظام تتبع متقدم لمراقبة شحنتك لحظة بلحظة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="h-80 w-full overflow-hidden rounded-xl lg:h-[500px]">
+                <img
+                  alt="حاويات شحن في ميناء تجاري وقت الغروب"
+                  class="h-full w-full object-cover"
+                  src="https://images.unsplash.com/photo-1634638022229-5a52221886dc?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-background-dark py-16 sm:py-24"
+        >
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center gap-12">
+              <div class="flex flex-col items-center gap-4 text-center">
+                <h2
+                  class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                >
+                  ماذا يقول عملاؤنا؟
+                </h2>
+                <p
+                  class="max-w-2xl text-lg text-text-light/80 dark:text-text-dark/80"
+                >
+                  شهادات من شركائنا حول العالم تؤكد التزامنا بالجودة والموثوقية.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div
+                  class="rounded-xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10"
+                >
+                  <p class="text-text-light/90 dark:text-text-dark/90">
+                    "المنتجات تصل دائمًا بحالة ممتازة. التزامهم بالمواعيد
+                    والجودة لا مثيل له. نوصي بهم بشدة كشريك استراتيجي."
+                  </p>
+                  <div class="mt-4 flex items-center gap-4">
+                    <div class="flex flex-col">
+                      <p class="font-bold">أحمد منصور</p>
+                      <p
+                        class="text-sm text-text-light/70 dark:text-text-dark/70"
+                      >
+                        مدير المشتريات، شركة استيراد - الإمارات
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10"
+                >
+                  <p class="text-text-light/90 dark:text-text-dark/90">
+                    "تعامل احترافي وسريع. فريقهم متعاون جدًا ويقدم حلولًا
+                    لوجستية ممتازة تتناسب مع احتياجاتنا في السوق الأوروبي."
+                  </p>
+                  <div class="mt-4 flex items-center gap-4">
+                    <div class="flex flex-col">
+                      <p class="font-bold">ماريا شميت</p>
+                      <p
+                        class="text-sm text-text-light/70 dark:text-text-dark/70"
+                      >
+                        رئيسة قسم الجودة، موزع أغذية - ألمانيا
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10"
+                >
+                  <p class="text-text-light/90 dark:text-text-dark/90">
+                    "لقد عملنا معهم لسنوات، وجودة الخضروات ثابتة وممتازة. إنهم
+                    شريك يمكننا الاعتماد عليه لتلبية طلبات عملائنا."
+                  </p>
+                  <div class="mt-4 flex items-center gap-4">
+                    <div class="flex flex-col">
+                      <p class="font-bold">جون تان</p>
+                      <p
+                        class="text-sm text-text-light/70 dark:text-text-dark/70"
+                      >
+                        مستورد رئيسي - سنغافورة
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-primary/5 dark:bg-primary/10 py-16 sm:py-24">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-16 lg:grid-cols-2">
+              <div>
+                <div class="mb-8 flex flex-col gap-4">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                  >
+                    اطلب عرض سعر
+                  </h2>
+                  <p class="text-lg text-text-light/80 dark:text-text-dark/80">
+                    املأ النموذج أدناه وسيقوم فريق المبيعات لدينا بالتواصل معك
+                    في أقرب وقت ممكن لتقديم عرض سعر مخصص لاحتياجاتك.
+                  </p>
+                </div>
+                <form class="space-y-4">
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label
+                        class="mb-1 block text-sm font-medium text-text-light dark:text-text-dark"
+                        for="name"
+                        >الاسم الكامل</label
+                      >
+                      <input
+                        class="w-full rounded-md border-primary/30 bg-background-light dark:bg-background-dark"
+                        id="name"
+                        placeholder="اسمك الكامل"
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="mb-1 block text-sm font-medium text-text-light dark:text-text-dark"
+                        for="company"
+                        >اسم الشركة</label
+                      >
+                      <input
+                        class="w-full rounded-md border-primary/30 bg-background-light dark:bg-background-dark"
+                        id="company"
+                        placeholder="شركتك"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      class="mb-1 block text-sm font-medium text-text-light dark:text-text-dark"
+                      for="email"
+                      >البريد الإلكتروني</label
+                    >
+                    <input
+                      class="w-full rounded-md border-primary/30 bg-background-light dark:bg-background-dark"
+                      id="email"
+                      placeholder="بريدك الإلكتروني"
+                      type="email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="mb-1 block text-sm font-medium text-text-light dark:text-text-dark"
+                      for="message"
+                      >رسالتك</label
+                    >
+                    <textarea
+                      class="w-full rounded-md border-primary/30 bg-background-light dark:bg-background-dark"
+                      id="message"
+                      placeholder="أخبرنا عن متطلباتك (المنتجات، الكميات، ميناء الوصول، إلخ)"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="w-full rounded-lg bg-secondary px-6 py-3 text-base font-bold text-text-light transition-transform hover:scale-105"
+                    type="submit"
+                  >
+                    إرسال الطلب
+                  </button>
+                </form>
+              </div>
+              <div>
+                <div class="mb-8 flex flex-col gap-4">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl"
+                  >
+                    أسئلة شائعة
+                  </h2>
+                  <p class="text-lg text-text-light/80 dark:text-text-dark/80">
+                    إجابات على بعض الأسئلة الأكثر شيوعًا من عملائنا.
+                  </p>
+                </div>
+                <div class="space-y-4">
+                  <details
+                    class="group rounded-lg bg-background-light p-4 dark:bg-background-dark"
+                  >
+                    <summary
+                      class="flex cursor-pointer list-none items-center justify-between font-medium"
+                    >
+                      ما هو الحد الأدنى لكمية الطلب؟
+                      <span
+                        class="material-symbols-outlined transition-transform group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-text-light/80 dark:text-text-dark/80">
+                      الحد الأدنى للطلب هو حاوية مبردة واحدة (20 قدمًا أو 40
+                      قدمًا). يمكننا مناقشة الطلبات المجمعة التي تحتوي على
+                      منتجات متنوعة.
+                    </p>
+                  </details>
+                  <details
+                    class="group rounded-lg bg-background-light p-4 dark:bg-background-dark"
+                  >
+                    <summary
+                      class="flex cursor-pointer list-none items-center justify-between font-medium"
+                    >
+                      ما هي الدول التي تقومون بالتصدير إليها؟
+                      <span
+                        class="material-symbols-outlined transition-transform group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-text-light/80 dark:text-text-dark/80">
+                      نحن نصدر إلى أكثر من 20 دولة في أوروبا والشرق الأوسط
+                      وآسيا. شبكتنا اللوجستية العالمية تمكننا من الوصول إلى معظم
+                      الموانئ الرئيسية.
+                    </p>
+                  </details>
+                  <details
+                    class="group rounded-lg bg-background-light p-4 dark:bg-background-dark"
+                  >
+                    <summary
+                      class="flex cursor-pointer list-none items-center justify-between font-medium"
+                    >
+                      هل يمكنني طلب عينات من المنتجات؟
+                      <span
+                        class="material-symbols-outlined transition-transform group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-text-light/80 dark:text-text-dark/80">
+                      نعم، يمكننا ترتيب إرسال عينات للعملاء الجادين. يرجى
+                      التواصل مع فريق المبيعات لدينا لمناقشة التفاصيل وترتيبات
+                      الشحن.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-primary text-white" id="contact">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
+            <div class="lg:col-span-1">
+              <div class="flex items-center gap-4 text-white">
+                <div class="size-8">
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+                    ></path>
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-xl font-bold">تصدير الخضروات</h2>
+              </div>
+              <p class="mt-4 text-white/80">
+                الجودة والنضارة من مزارعنا إلى العالم.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:col-span-3">
+              <div>
+                <h3 class="font-bold">روابط سريعة</h3>
+                <ul class="mt-4 space-y-2 text-white/80">
+                  <li>
+                    <a class="hover:text-secondary" href="#about">من نحن</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-secondary" href="#products"
+                      >منتجاتنا</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-secondary" href="#quality">الجودة</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-secondary" href="#contact">اتصل بنا</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold">تواصل معنا</h3>
+                <ul class="mt-4 space-y-2 text-white/80">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">email</span>
+                    sales@vegexport.com
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">call</span>
+                    +1 234 567 890
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg"
+                      >location_on</span
+                    >
+                    123 شارع الزراعة، القاهرة، مصر
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-12 border-t border-white/20 pt-8 text-center text-sm text-white/70"
+          >
+            <p>© 2024 تصدير الخضروات. جميع الحقوق محفوظة.</p>
+          </div>
+        </div>
+      </footer>
+      <div class="fixed bottom-4 left-4 z-40">
+        <button
+          class="flex items-center gap-2 rounded-full bg-secondary px-5 py-3 text-sm font-bold text-text-light shadow-lg transition-transform hover:scale-105"
+        >
+          <span class="material-symbols-outlined">request_quote</span>
+          <span>اطلب عرض سعر</span>
+        </button>
+      </div>
+      <div class="fixed bottom-4 right-4 z-40">
+        <button
+          class="flex h-12 items-center gap-2 rounded-full bg-background-light px-4 text-sm font-medium text-text-light shadow-lg transition-all hover:shadow-xl dark:bg-background-dark dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined text-primary">language</span>
+          <span>عربي</span>
+        </button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filterContainer = document.getElementById("product-filters");
+        const productGrid = document.getElementById("product-grid");
+        const productCards = Array.from(productGrid.children);
+        const filterProducts = (filter) => {
+          productCards.forEach((card) => {
+            const category = card.dataset.category;
+            if (filter === "all" || category === filter) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        };
+        filterContainer.addEventListener("click", (event) => {
+          const target = event.target.closest("button.product-filter-btn");
+          if (!target) return;
+          filterContainer.querySelectorAll("button").forEach((button) => {
+            button.setAttribute("aria-selected", "false");
+          });
+          target.setAttribute("aria-selected", "true");
+          const filterValue = target.dataset.filter;
+          filterProducts(filterValue);
+        });
+        // Initial filter based on the active button
+        const initialActiveButton = filterContainer.querySelector(
+          '[aria-selected="true"]'
+        );
+        if (initialActiveButton) {
+          filterProducts(initialActiveButton.dataset.filter);
+        }
+        // Counter animation
+        const animateCounters = () => {
+          const counters = document.querySelectorAll(".counter");
+          const duration = 2000; // 2 seconds
+          counters.forEach((counter) => {
+            const target = +counter.getAttribute("data-target");
+            let current = 0;
+            const increment = target / (duration / 16); // ~60fps
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                counter.innerText = Math.ceil(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.innerText = target;
+              }
+            };
+            updateCounter();
+          });
+        };
+        const statsSection = document.getElementById("stats-section");
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.5,
+          }
+        ); // Trigger when 50% of the element is visible
+        observer.observe(statsSection);
+      });
+    </script>
+  </body>
+</html>
